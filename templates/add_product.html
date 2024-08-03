@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Add Product{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h1 class="text-center">Add Product</h1>
+        <form method="POST" action="{{ url_for('products.add_product') }}">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="code">Code:</label>
+                <input type="text" id="code" name="code" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="cost_price">Cost Price:</label>
+                <input type="number" id="cost_price" name="cost_price" class="form-control" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="sale_price">Sale Price:</label>
+                <input type="number" id="sale_price" name="sale_price" class="form-control" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="expiration_date">Expiration Date:</label>
+                <input type="date" id="expiration_date" name="expiration_date" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Add Product</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

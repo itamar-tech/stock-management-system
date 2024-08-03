@@ -1,10 +1,9 @@
 {% extends "base.html" %}
-{% block title %}Products{% endblock %}
+{% block title %}Inventory Report{% endblock %}
 {% block content %}
 <div class="row justify-content-center">
     <div class="col-md-10">
-        <h1 class="text-center">Products</h1>
-        <a href="{{ url_for('products.add_product') }}" class="btn btn-success mb-3">Add Product</a>
+        <h1 class="text-center">Inventory Report</h1>
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
@@ -29,6 +28,9 @@
                 {% endfor %}
             </tbody>
         </table>
+        <div class="text-center mt-3">
+            <a href="{{ url_for('products.list_products') }}">Back to Products</a>
+        </div>
     </div>
 </div>
 {% endblock %}

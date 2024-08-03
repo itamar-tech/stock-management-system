@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Exits Report</title>
+    <title>Entries Report</title>
 </head>
 <body>
-    <h1>Exits Report</h1>
+    <h1>Entries Report</h1>
     <table>
         <thead>
             <tr>
@@ -16,11 +15,11 @@
             </tr>
         </thead>
         <tbody>
-            {% for exit in exits %}
+            {% for entry in entries %}
                 <tr>
-                    <td>{{ exit.product.name }}</td>
-                    <td>{{ exit.quantity }}</td>
-                    <td>{{ exit.date }}</td>
+                    <td>{{ entry.product.name }}</td>
+                    <td>{{ entry.quantity }}</td>
+                    <td>{{ entry.date }}</td>
                 </tr>
             {% endfor %}
         </tbody>
