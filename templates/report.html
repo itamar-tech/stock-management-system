@@ -1,18 +1,17 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Exits Report</title>
+    <title>Relatório de Saídas</title>
 </head>
 <body>
-    <h1>Exits Report</h1>
+    <h1>Relatório de Saídas</h1>
     <table>
         <thead>
             <tr>
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>Date</th>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Data</th>
             </tr>
         </thead>
         <tbody>
@@ -25,6 +24,6 @@
             {% endfor %}
         </tbody>
     </table>
-    <a href="{{ url_for('products.list_products') }}">Back to Products</a>
+    <a href="{{ url_for('products.list_products') }}">Voltar para Produtos</a>
 </body>
 </html>

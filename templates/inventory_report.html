@@ -1,18 +1,18 @@
 {% extends "base.html" %}
-{% block title %}Inventory Report{% endblock %}
+{% block title %}Relatório de Inventário{% endblock %}
 {% block content %}
 <div class="row justify-content-center">
     <div class="col-md-10">
-        <h1 class="text-center">Inventory Report</h1>
+        <h1 class="text-center">Relatório de Inventário</h1>
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Code</th>
-                    <th>Quantity</th>
-                    <th>Cost Price</th>
-                    <th>Sale Price</th>
-                    <th>Expiration Date</th>
+                    <th>Nome</th>
+                    <th>Código</th>
+                    <th>Quantidade</th>
+                    <th>Preço de Custo</th>
+                    <th>Preço de Venda</th>
+                    <th>Data de Validade</th>
                 </tr>
             </thead>
             <tbody>
@@ -29,7 +29,7 @@
             </tbody>
         </table>
         <div class="text-center mt-3">
-            <a href="{{ url_for('products.list_products') }}">Back to Products</a>
+            <a href="{{ url_for('products.list_products') }}">Voltar para Produtos</a>
         </div>
     </div>
 </div>

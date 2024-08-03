@@ -1,12 +1,12 @@
 {% extends "base.html" %}
-{% block title %}Stock Exit{% endblock %}
+{% block title %}Saída de Estoque{% endblock %}
 {% block content %}
 <div class="row justify-content-center">
     <div class="col-md-6">
-        <h1 class="text-center">Stock Exit</h1>
+        <h1 class="text-center">Saída de Estoque</h1>
         <form method="POST" action="{{ url_for('stock.stock_exit') }}">
             <div class="form-group">
-                <label for="product_id">Product:</label>
+                <label for="product_id">Produto:</label>
                 <select id="product_id" name="product_id" class="form-control" required>
                     {% for product in products %}
                         <option value="{{ product.id }}">{{ product.name }}</option>
@@ -14,13 +14,13 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="quantity">Quantity:</label>
+                <label for="quantity">Quantidade:</label>
                 <input type="number" id="quantity" name="quantity" class="form-control" required>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Register Exit</button>
+            <button type="submit" class="btn btn-primary btn-block">Registrar Saída</button>
         </form>
         <div class="text-center mt-3">
-            <a href="{{ url_for('products.list_products') }}">Back to Products</a>
+            <a href="{{ url_for('products.list_products') }}">Voltar para Produtos</a>
         </div>
     </div>
 </div>

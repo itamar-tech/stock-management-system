@@ -1,15 +1,15 @@
 {% extends "base.html" %}
-{% block title %}Exits Report{% endblock %}
+{% block title %}Relatório de Saídas{% endblock %}
 {% block content %}
 <div class="row justify-content-center">
     <div class="col-md-10">
-        <h1 class="text-center">Exits Report</h1>
+        <h1 class="text-center">Relatório de Saídas</h1>
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th>Date</th>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Data</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,7 +23,7 @@
             </tbody>
         </table>
         <div class="text-center mt-3">
-            <a href="{{ url_for('products.list_products') }}">Back to Products</a>
+            <a href="{{ url_for('products.list_products') }}">Voltar para Produtos</a>
         </div>
     </div>
 </div>

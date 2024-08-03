@@ -1,19 +1,19 @@
 {% extends "base.html" %}
-{% block title %}Products{% endblock %}
+{% block title %}Produtos{% endblock %}
 {% block content %}
 <div class="row justify-content-center">
     <div class="col-md-10">
-        <h1 class="text-center">Products</h1>
-        <a href="{{ url_for('products.add_product') }}" class="btn btn-success mb-3">Add Product</a>
+        <h1 class="text-center">Produtos</h1>
+        <a href="{{ url_for('products.add_product') }}" class="btn btn-success mb-3">Adicionar Produto</a>
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Code</th>
-                    <th>Quantity</th>
-                    <th>Cost Price</th>
-                    <th>Sale Price</th>
-                    <th>Expiration Date</th>
+                    <th>Nome</th>
+                    <th>Código</th>
+                    <th>Quantidade</th>
+                    <th>Preço de Custo</th>
+                    <th>Preço de Venda</th>
+                    <th>Data de Validade</th>
                 </tr>
             </thead>
             <tbody>

@@ -6,17 +6,17 @@
         <h1 class="text-center">Login</h1>
         <form method="POST" action="{{ url_for('auth.login') }}">
             <div class="form-group">
-                <label for="username">Username:</label>
+                <label for="username">Nome de Usuário:</label>
                 <input type="text" id="username" name="username" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="password">Password:</label>
+                <label for="password">Senha:</label>
                 <input type="password" id="password" name="password" class="form-control" required>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Login</button>
+            <button type="submit" class="btn btn-primary btn-block">Entrar</button>
         </form>
         <div class="text-center mt-3">
-            <a href="{{ url_for('auth.register') }}">Don't have an account? Register here.</a>
+            <a href="{{ url_for('auth.register') }}">Não tem uma conta? Registre-se aqui.</a>
         </div>
     </div>
 </div>
