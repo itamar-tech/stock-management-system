@@ -10,10 +10,10 @@ from models import db
 app = Flask(__name__)
 
 # Use a chave secreta gerada aqui
-app.config['SECRET_KEY'] = '5cce427c00da41941d7c0b58948494bf66b8a6dcdf02440a'
+app.config['SECRET_KEY'] = 'your_secret_key'
 
-# Atualize a string de conexão para omitir a senha
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:@localhost/stock_management_system'
+# Configuração do banco de dados
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:lucas2023@mysql/stock_management_system'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)
