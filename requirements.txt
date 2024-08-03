@@ -3,3 +3,4 @@ Flask-SQLAlchemy
 Flask-Migrate
 watchdog
 mysql-connector-python
+flask-login
