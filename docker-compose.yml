@@ -7,18 +7,14 @@ services:
       - "5000:5000"
     environment:
       - FLASK_ENV=development
-      - MYSQL_DATABASE=stock_management_system
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=
-      - MYSQL_ROOT_PASSWORD=
-      - MYSQL_HOST=mysql
+      - SQLALCHEMY_DATABASE_URI=mysql+mysqlconnector://root:lucas2023@mysql/stock_management_system
     depends_on:
       - mysql
 
   mysql:
     image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: your_password
+      MYSQL_ROOT_PASSWORD: lucas2023
       MYSQL_DATABASE: stock_management_system
     ports:
       - "3306:3306"

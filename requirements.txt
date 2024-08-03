@@ -3,3 +3,7 @@ Flask-SQLAlchemy
 Flask-Migrate
 watchdog
 mysql-connector-python
+<<<<<<< HEAD
+=======
+mysql-connector-python
+>>>>>>> 17d96248299403043079fbc4c3921e782906cdc0
