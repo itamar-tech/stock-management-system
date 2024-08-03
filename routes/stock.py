@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash
 from models import db, StockEntry, StockExit, Product
+from datetime import datetime
 
 stock_bp = Blueprint('stock', __name__)
 
@@ -8,7 +9,7 @@ def stock_entry():
     if request.method == 'POST':
         product_id = request.form['product_id']
         quantity = request.form['quantity']
-        new_entry = StockEntry(product_id=product_id, quantity=quantity)
+        new_entry = StockEntry(product_id=product_id, quantity=quantity, date=datetime.utcnow())
         product = Product.query.get(product_id)
         product.quantity += int(quantity)
         db.session.add(new_entry)
@@ -21,10 +22,10 @@ def stock_entry():
 
 @stock_bp.route('/exit', methods=['GET', 'POST'])
 def stock_exit():
-    if request.method == ['POST']:
+    if request.method == 'POST':
         product_id = request.form['product_id']
         quantity = request.form['quantity']
-        new_exit = StockExit(product_id=product_id, quantity=quantity)
+        new_exit = StockExit(product_id=product_id, quantity=quantity, date=datetime.utcnow())
         product = Product.query.get(product_id)
         if product.quantity >= int(quantity):
             product.quantity -= int(quantity)
